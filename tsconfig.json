@@ -6,6 +6,12 @@
     "paths": {
       "@/*": [
         "*"
+      ],
+      "@/presentation/*": [
+        "src/features/tasks/presentation/*"
+      ],
+      "@/data/*": [
+        "src/features/tasks/data/*"
       ]
     }
   },
