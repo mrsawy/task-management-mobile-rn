@@ -45,7 +45,7 @@ export class TaskRepository {
     const statusMap: Record<TaskStatus, TaskStatus> = {
       todo: 'in-progress',
       'in-progress': 'completed',
-      completed: 'todo',
+      completed: 'completed',
     };
     const newStatus = statusMap[currentStatus];
     await this.updateTask(id, { status: newStatus });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Badge } from '@/src/components/atoms/badge';
 import { Text } from '@/src/components/atoms/text';
-import { TaskPriority } from '@/src/features/tasks/data/models/task.model';
 import { cn } from '@/src/lib/utils';
+import { TaskPriorityBadgeProps } from './task-priority-badge.types';
 
 const priorityColors = {
   low: 'bg-blue-100',
@@ -16,10 +16,6 @@ const priorityTextColors = {
   high: 'text-red-700',
 };
 
-interface TaskPriorityBadgeProps {
-  priority: TaskPriority;
-}
-
 export function TaskPriorityBadge({ priority }: TaskPriorityBadgeProps) {
   return (
     <Badge
@@ -30,6 +26,6 @@ export function TaskPriorityBadge({ priority }: TaskPriorityBadgeProps) {
       )}>
       <Text className="text-xs font-medium capitalize text-black">{priority}</Text>
     </Badge>
-  ); 
+  );
 }
 

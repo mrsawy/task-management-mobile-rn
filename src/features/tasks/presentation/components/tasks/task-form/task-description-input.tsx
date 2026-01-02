@@ -2,11 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Input } from '@/src/components/atoms/input';
 import { Label } from '@/src/components/atoms/label';
-
-interface TaskDescriptionInputProps {
-  value: string;
-  onChange: (value: string) => void;
-}
+import { TaskDescriptionInputProps } from './task-description-input.types';
 
 export function TaskDescriptionInput({ value, onChange }: TaskDescriptionInputProps) {
   return (

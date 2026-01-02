@@ -3,12 +3,7 @@ import { View } from 'react-native';
 import { Text } from '@/src/components/atoms/text';
 import { Input } from '@/src/components/atoms/input';
 import { Label } from '@/src/components/atoms/label';
-
-interface TaskTitleInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  error?: string;
-}
+import { TaskTitleInputProps } from './task-title-input.types';
 
 export function TaskTitleInput({ value, onChange, error }: TaskTitleInputProps) {
   return (
@@ -25,4 +20,3 @@ export function TaskTitleInput({ value, onChange, error }: TaskTitleInputProps) 
     </View>
   );
 }
-

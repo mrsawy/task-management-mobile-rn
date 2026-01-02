@@ -1,14 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Text } from '@/src/components/atoms/text';
-import { Task } from '@/src/features/tasks/data/models/task.model';
 import { cn } from '@/src/lib/utils';
+import { TaskCardHeaderProps } from './task-header.types';
 
-interface TaskHeaderProps {
-  task: Task;
-}
-
-export function TaskHeader({ task }: TaskHeaderProps) {
+export function TaskCardHeader({ task }: TaskCardHeaderProps) {
   const isCompleted = task.status === 'completed';
 
   return (

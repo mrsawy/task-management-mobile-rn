@@ -2,13 +2,7 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import { Text } from '@/src/components/atoms/text';
 import { cn } from '@/src/lib/utils';
-
-interface TaskTabButtonProps {
-  label: string;
-  count: number;
-  isActive: boolean;
-  onPress: () => void;
-}
+import { TaskTabButtonProps } from './task-tab-button.types';
 
 export function TaskTabButton({ label, count, isActive, onPress }: TaskTabButtonProps) {
   return (
@@ -37,4 +31,3 @@ export function TaskTabButton({ label, count, isActive, onPress }: TaskTabButton
     </Pressable>
   );
 }
-

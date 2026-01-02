@@ -1,19 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Text } from '@/src/components/atoms/text';
-import { Task } from '@/src/features/tasks/data/models/task.model';
 import { TaskPriorityBadge } from './task-priority-badge';
 import { cn } from '@/src/lib/utils';
+import { TaskMetaProps } from './task-meta.types';
 
 const statusColors = {
   todo: 'bg-gray-500',
   'in-progress': 'bg-blue-500',
   completed: 'bg-green-500',
 };
-
-interface TaskMetaProps {
-  task: Task;
-}
 
 export function TaskMeta({ task }: TaskMetaProps) {
   return (

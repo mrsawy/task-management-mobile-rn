@@ -2,10 +2,7 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import { Trash2 } from 'lucide-react-native';
 import { Icon } from '@/src/components/atoms/icon';
-
-interface TaskActionsProps {
-  onDelete: () => void;
-}
+import { TaskActionsProps } from './task-actions.types';
 
 export function TaskActions({ onDelete }: TaskActionsProps) {
   return (

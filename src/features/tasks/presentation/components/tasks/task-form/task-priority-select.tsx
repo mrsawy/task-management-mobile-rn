@@ -11,11 +11,7 @@ import {
   SelectValue,
 } from '@/src/components/atoms/select';
 import { TaskPriority } from '@/src/features/tasks/data/models/task.model';
-
-interface TaskPrioritySelectProps {
-  value: TaskPriority;
-  onChange: (priority: TaskPriority) => void;
-}
+import { TaskPrioritySelectProps } from './task-priority-select.types';
 
 const priorities: { label: string; value: TaskPriority }[] = [
   { label: 'Low', value: 'low' },

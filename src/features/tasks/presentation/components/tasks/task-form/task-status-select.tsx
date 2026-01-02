@@ -11,11 +11,7 @@ import {
   SelectValue,
 } from '@/src/components/atoms/select';
 import { TaskStatus } from '@/src/features/tasks/data/models/task.model';
-
-interface TaskStatusSelectProps {
-  value: TaskStatus;
-  onChange: (status: TaskStatus) => void;
-}
+import { TaskStatusSelectProps } from './task-status-select.types';
 
 const statuses: { label: string; value: TaskStatus }[] = [
   { label: 'To Do', value: 'todo' },
