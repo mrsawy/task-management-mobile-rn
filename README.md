@@ -13,6 +13,16 @@ A modern, cross-platform task management application built with React Native and
 - **Pull to Refresh**: Refresh task list with pull-to-refresh gesture
 - **Cross-Platform**: Runs on iOS, Android, and Web
 
+## Screenshots
+
+### Light Theme
+![Task Manager - Light Theme](https://drive.google.com/uc?export=view&id=1eSViePFk6C8L0n_-ueuwAPgW088lJlQG)
+*Task list view with Todo tab active, showing multiple tasks with different priorities*
+
+### Dark Theme
+![Task Manager - Dark Theme](https://drive.google.com/uc?export=view&id=1_3ekwu0GrAIJyL1SVe-gJ04LPo6C89Qa)
+*Task list view with Completed tab active, showing completed tasks with strikethrough styling*
+
 ## Tech Stack
 
 ### Core Framework

@@ -17,12 +17,13 @@ import { THEME } from '@/src/lib/theme';
 import { useUniwind } from 'uniwind';
 import { TasksPageProps, TabItem } from './task.types';
 
-export function TasksPage({}: TasksPageProps) {
+export function TasksPage({ }: TasksPageProps) {
   const { tasks, deleteTask, toggleTaskStatus, updateTask, initialize, loadTasks, isLoading, initialized } = useTaskStore();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState<TaskStatus>('todo');
+  const { theme } = useUniwind();
 
   useEffect(() => {
     if (!initialized) {
@@ -44,7 +45,7 @@ export function TasksPage({}: TasksPageProps) {
   const completedCount = tasks.filter((t) => t.status === 'completed').length;
 
   const getFilteredTasks = (status: TaskStatus) => {
-    return tasks.filter((task) => task.status === status);
+    return tasks.filter((task) => task.status === status).sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
   };
 
   const tabs: TabItem[] = [
@@ -156,7 +157,7 @@ export function TasksPage({}: TasksPageProps) {
               setIsFormOpen(true);
             }}
             className="w-full">
-            <Icon as={Plus} className="size-5" color={THEME['dark'].primary} />
+            <Icon as={Plus} className="size-5" color={THEME[theme as 'light' | 'dark' || 'light'].secondary} />
             <Text className="text-primary-foreground">Add New Task</Text>
           </Button>
         </View>
